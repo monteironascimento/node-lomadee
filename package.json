@@ -1,0 +1,36 @@
+{
+  "name": "node-lomadee",
+  "version": "1.0.0",
+  "description": "Sincronizacao de ofertas Lomadee",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=developement ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "test": "NODE_ENV=test ts-node src/server.ts",
+    "start": "NODE_ENV=production ts-node src/server.ts", 
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+  },
+  
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "request": "^2.88.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4",
+    "url": "^0.11.0",
+    "xml2json-light": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "nodemon": "^2.0.7",
+    "ts-node-dev": "^1.1.6"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "tokens/*",
+      "docs/*"
+    ],
+    "delay": "2500"
+  }
+}
